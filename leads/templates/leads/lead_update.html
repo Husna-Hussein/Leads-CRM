@@ -1,12 +1,6 @@
-<!DOCTYPE html>
-<html>
-    <head>
-      <title>Document</title>
-      
-      
-    </head>
-    <body>
-        <a href="/leads">Go back to leads</a>
+{% extends "base.html" %}
+{% block content %}
+        <a href="{% url 'leads:lead-detail' lead.pk %}">Go back to leads</a>
         <hr>
         <h1>Update lead {{ lead.first_name}}  {{ lead.last_name}}</h1>
         <form method="POST">
@@ -16,5 +10,4 @@
         </form>
          
 
-    </body>
-</html>
+{% endblock %} 
