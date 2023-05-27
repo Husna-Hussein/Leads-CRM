@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Document</title>
+      
+      
+    </head>
+    <body>
+        <a href="/leads">Go back to leads</a>
+        <hr>
+        <h1>Update lead {{ lead.first_name}}  {{ lead.last_name}}</h1>
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Submit</button>
+        </form>
+         
+
+    </body>
+</html>
