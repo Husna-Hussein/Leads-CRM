@@ -21,7 +21,7 @@
               <form method="POST">
                 {% csrf_token %}
                 {{ form.as_p }}
-                <button type="submit">Submit</button>
+                <button class="w-1/4 mt-10 flex-left ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded" type="submit">Submit</button>
             </form>
               <div class="flex">
                 <a href="{% url 'leads:lead-delete' lead.pk %}" class="w-1/4 mt-3 flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">
