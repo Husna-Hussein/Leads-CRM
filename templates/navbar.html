@@ -11,11 +11,14 @@
       {% if  not request.user.is_authenticated %}
       <a href="{% url 'signup' %}" class="mr-5 hover:text-gray-900">Signup</a>
       {% else %}
-      {% if requset.user.is_organiser %}
-      <a href="{% url 'agents:agent-list'%}" class="mr-5 hover:text-gray-900">Agents</a>
-      {% endif %}
-      <a href="{% url 'leads:lead-list'%}" class="mr-5 hover:text-gray-900">Leads</a>
-      {% endif %}
+       {% if request.user.is_organiser %}
+         <a href="{% url 'agents:agent-list' %}" class="mr-5 hover:text-gray-900">Agents</a>
+      
+         {% endif %}
+      <a href="{% url 'leads:lead-list' %}" class="mr-5 hover:text-gray-900">Leads</a>
+      
+      
+       {% endif %}
     </nav>
     {% if request.user.is_authenticated %}
     Logged in as: {{request.user.username}}
